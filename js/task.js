@@ -77,23 +77,23 @@
 // const lastTag = apartment.tags[2];
 // console.log(lastTag);
 ///////////////////////////////////
-const book = {
-  title: 'The Last Kingdom',
-  author: 'Bernard Cornwell',
-  genres: ['historical prose', 'adventure'],
-  isPublic: true,
-  rating: 8.38,
-};
+// const book = {
+//   title: 'The Last Kingdom',
+//   author: 'Bernard Cornwell',
+//   genres: ['historical prose', 'adventure'],
+//   isPublic: true,
+//   rating: 8.38,
+// };
 
-console.log(book.title); // "The Last Kingdom"
-console.log(book['title']); // "The Last Kingdom"
+// console.log(book.title); // "The Last Kingdom"
+// console.log(book['title']); // "The Last Kingdom"
 
-console.log(book.genres); // ["historical prose", "adventure"]
-console.log(book['genres']); // ["historical prose", "adventure"]
+// console.log(book.genres); // ["historical prose", "adventure"]
+// console.log(book['genres']); // ["historical prose", "adventure"]
 
-const propKey = 'author';
-console.log(book.propKey); // undefined
-console.log(book[propKey]); // "Bernard Cornwell"
+// const propKey = 'author';
+// console.log(book.propKey); // undefined
+// console.log(book[propKey]); // "Bernard Cornwell"
 
 const user = {
   firstName: 'Jacob',
@@ -114,3 +114,19 @@ console.log(aptRating);
 const aptDescr = apartment['descr'];
 const aptPrice = apartment['price'];
 const aptTags = apartment['tags'];
+
+const book = {
+  title: 'The Last Kingdom',
+  author: 'Bernard Cornwell',
+  genres: ['historical prose', 'adventure'],
+  isPublic: true,
+  rating: 8.38,
+};
+
+book.rating = 9;
+book.isPublic = false;
+book.genres.push('drama');
+
+console.log(book.rating); // 9
+console.log(book.isPublic); // false
+console.log(book.genres); // ["historical prose", "adventure", "drama"]
