@@ -95,25 +95,41 @@
 // console.log(book.propKey); // undefined
 // console.log(book[propKey]); // "Bernard Cornwell"
 
-const user = {
-  firstName: 'Jacob',
-  lastName: 'Mercer',
-};
-console.log(user['firstName']);
+// const user = {
+//   firstName: 'Jacob',
+//   lastName: 'Mercer',
+// };
+// console.log(user['firstName']);
 
-const apartment = {
-  imgUrl: 'https://via.placeholder.com/640x480',
-  descr: 'Spacious apartment in the city center',
-  rating: 4,
-  price: 2153,
-  tags: ['premium', 'promoted', 'top'],
-};
+// const apartment = {
+//   imgUrl: 'https://via.placeholder.com/640x480',
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+//   tags: ['premium', 'promoted', 'top'],
+// };
 
-const aptRating = apartment['rating'];
-console.log(aptRating);
-const aptDescr = apartment['descr'];
-const aptPrice = apartment['price'];
-const aptTags = apartment['tags'];
+// const aptRating = apartment['rating'];
+// console.log(aptRating);
+// const aptDescr = apartment['descr'];
+// const aptPrice = apartment['price'];
+// const aptTags = apartment['tags'];
+
+// const book = {
+//   title: 'The Last Kingdom',
+//   author: 'Bernard Cornwell',
+//   genres: ['historical prose', 'adventure'],
+//   isPublic: true,
+//   rating: 8.38,
+// };
+
+// book.rating = 9;
+// book.isPublic = false;
+// book.genres.push('drama');
+
+// console.log(book.rating); // 9
+// console.log(book.isPublic); // false
+// console.log(book.genres); // ["historical prose", "adventure", "drama"]
 
 const book = {
   title: 'The Last Kingdom',
@@ -123,10 +139,15 @@ const book = {
   rating: 8.38,
 };
 
-book.rating = 9;
-book.isPublic = false;
-book.genres.push('drama');
+book.pageCount = 836;
+book.originalLanguage = 'en';
+book.translations = ['ua', 'ru'];
+book.price = {
+  hardcover: 39,
+  softcover: 29,
+};
 
-console.log(book.rating); // 9
-console.log(book.isPublic); // false
-console.log(book.genres); // ["historical prose", "adventure", "drama"]
+console.log(book.pageCount); // 836
+console.log(book.originalLanguage); // "en"
+console.log(book.translations); // ["ua", "ru"]
+console.log(book.price);
