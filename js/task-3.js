@@ -1,36 +1,24 @@
 /**
- *Об’єкт profile описує профіль користувача на ігровій платформі. 
- У його властивостях зберігається ім’я профілю username 
- та кількість активних годин playTime, проведених у грі.
-
- Доповни об’єкт profile методами для роботи з його властивостями.
-
- Метод changeUsername(newName) повинен приймати рядок (нове ім’я) 
- в параметр newName та змінювати значення властивості username на нове. 
- Нічого не повертає.
- Метод updatePlayTime(hours) повинен приймати число (кількість годин) 
- у параметр hours та збільшити на нього значення властивості playTime. 
- Нічого не повертає.
- Метод getInfo() має повертати рядок формату <Username> has <amount> active hours!, 
- де <Username> — це ім’я профілю, а <amount> — кількість ігрових годин.
+ *Объект profile описывает профиль пользователя на игровой платформе. В его свойствах хранится имя профиля username и количество активных часов playTime, проведенных в игре.
+ Метод changeUsername(newName) должен принимать строку (новое имя) в параметр newName и изменять значение свойства username на новое. Ничего не возвращает.
+ Метод updatePlayTime(hours) должен принимать число (количество часов) в параметр hours и увеличить на него значение свойства playTime. Ничего не возвращает.
+ Метод getInfo() должен возвращать строку формата <Username> has <amount> active hours!, где <Username> - это имя профиля, а <amount> - количество игровых часов.
  */
 const profile = {
   userName: 'Jacob',
   playTime: 300,
   changeUsername(newName) {
-    this.userName = newName;
+    this.userName === newName;
   },
   updatePlayTime(hours) {
     this.playTime += hours;
   },
   getInfo() {
-    return `${this.userName} has ${this.playTime} active hours!`;
+    return `${this.Username} has ${this.playTime} active hours!`;
   },
 };
 console.log(profile.getInfo()); // "Jacob has 300 active hours!"
-
 profile.changeUsername('Marco');
 console.log(profile.getInfo()); // "Marco has 300 active hours!"
-
 profile.updatePlayTime(20);
 console.log(profile.getInfo()); // "Marco has 320 active hours!"
